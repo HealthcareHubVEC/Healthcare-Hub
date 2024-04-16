@@ -5,8 +5,9 @@ import heroImg03 from "../assets/images/hero-img03.png";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
+import featureImg from "../assets/images/feature-img.png";
 import { Link } from "react-router-dom";
-import { BsArrowRight,  } from "react-icons/bs";
+import { BsArrowRight, } from "react-icons/bs";
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
 const Home = () => {
@@ -93,15 +94,15 @@ const Home = () => {
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Find a Doctor</h2>
-                  <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                    World-class care everyone. Our health system offers 
-                    unmatched, expert health care. From the lab to the clinic.
-                    </p>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  World-class care everyone. Our health system offers
+                  unmatched, expert health care. From the lab to the clinic.
+                </p>
 
-                  <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
+                <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
                    mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-                    <BsArrowRight className="group-hover:text-white w-6 h-5"/>
-                  </Link>
+                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
+                </Link>
               </div>
 
             </div>
@@ -113,15 +114,15 @@ const Home = () => {
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Find a Location</h2>
-                  <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                    World-class care everyone. Our health system offers 
-                    unmatched, expert health care. From the lab to the clinic.
-                    </p>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  World-class care everyone. Our health system offers
+                  unmatched, expert health care. From the lab to the clinic.
+                </p>
 
-                  <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
+                <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
                    mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-                    <BsArrowRight className="group-hover:text-white w-6 h-5"/>
-                  </Link>
+                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
+                </Link>
               </div>
 
             </div>
@@ -133,40 +134,79 @@ const Home = () => {
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Book Appointment</h2>
-                  <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                    World-class care everyone. Our health system offers 
-                    unmatched, expert health care. From the lab to the clinic.
-                    </p>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  World-class care everyone. Our health system offers
+                  unmatched, expert health care. From the lab to the clinic.
+                </p>
 
-                  <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
+                <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
                    mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-                    <BsArrowRight className="group-hover:text-white w-6 h-5"/>
-                  </Link>
+                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
+                </Link>
               </div>
 
             </div>
           </div>
         </div>
       </section>
-        <About />
+      <About />
 
-        {/*========services section=======*/}
-        <section>
-          <div className = "container">
-            <div className = "xl:w-[470px] mx-auto">
-              <h2 className="heading text-center">Our medical services</h2>
-              <p className = "text__para text-center">
-                World-class care for everyone. Our health System offers unmatched,
-                expert health care.
-              </p>
+      {/*========services section=======*/}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Our medical services</h2>
+            <p className="text__para text-center">
+              World-class care for everyone. Our health System offers unmatched,
+              expert health care.
+            </p>
+          </div>
+
+          <ServiceList />
+        </div>
+      </section>
+      {/*========services section end=======*/}
+
+      {/*======== feature section=======*/}
+      <section>
+        <div className="container">
+          <div className="flex items-center justify-between flex-col lg:flex-row">
+
+            {/*=======feature content======*/}
+            <div className="xl:w-[670px]">
+              <h2 className="heading">
+                Get virtual treatment <br /> anytime.
+              </h2>
+
+              <ul className="pl-4">
+                <li className="text__para">
+                  1. Schedule the appointment directly.
+                </li>
+                <li className="text__para">
+                  2. Search for your physician here, and contact their office.
+                </li>
+                <li className="text__para">
+                  3. Veiw our physician who are accepting new patients, use the
+                  online scheduling tool to select appointment time
+                </li>
+              </ul>
+              <Link to="/">
+                <button className="btn">Learn More</button>
+              </Link>
             </div>
 
-            <ServiceList />
+          {/*====feature img======*/}
+          <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
+            <img src={featureImg} className="w-3/4" alt="" />
+
+            <div className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-
+            [100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] rounded-[10px]"></div>
           </div>
-        </section>
-        {/*========services section end=======*/}
 
-
+          </div>
+        </div>
+      </section>
+      {/*======== feature section end=======*/}
     </>
   </>
 };
