@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import logo from "../../assets/images/logo.png";
 import userImg from "../../assets/images/avatar-icon.png";
 import { NavLink, Link } from "react-router-dom";
-import {BiMenu} from "react-icons/bi";
+import { BiMenu } from "react-icons/bi";
 
 const navLinks = [
   {
@@ -27,8 +27,9 @@ const Header = () => {
 
   const headerRef = useRef(null)
   const menuRef =useRef(null)
+  
 
-const handelStickyHeader = ()=>{
+const handleStickyHeader = ()=>{
   window.addEventListener('scroll',()=>{
     if(document.body.scrollTop >80 || document.documentElement.scrollTop > 80){
       headerRef.current.classList.add('sticky__header')
@@ -39,9 +40,9 @@ const handelStickyHeader = ()=>{
 }
 
 useEffect(()=>{
-  handelStickyHeader()
+  handleStickyHeader()
 
-  return ()=> window.removeEventListener('scroll',handelStickyHeader);
+  return ()=> window.removeEventListener('scroll',handleStickyHeader);
 });
 
 const toggleMenu =()=> menuRef.current.classList.toggle('show__menu')
