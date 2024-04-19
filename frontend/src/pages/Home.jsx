@@ -16,6 +16,7 @@ import ServiceList from "../components/Services/ServiceList";
 import DoctorList from "../components/Doctors/DoctorList";
 import FaqList from "../components/Faq/FaqList";
 
+
 const Home = () => {
   return <>
     {/*===== hero section =====*/}
