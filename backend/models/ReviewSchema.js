@@ -46,10 +46,10 @@ reviewSchema.statics.calcAverageRatings = async function(doctorId) {
     },
   },
 ]);
-  await Doctor.findByIdAndUpdate(doctorId, {
-    totalRating: stats[0].numOfRating,
-    averageRating: stats[0].avgRating,
-  });
+await Doctor.findByIdAndUpdate(doctorId, {
+  totalRating: stats[0].numOfRating,
+  averageRating: stats[0].avgRating,
+})
 };
 reviewSchema.post('save', function() {
   this.constructor.calcAverageRatings(this.doctor);
