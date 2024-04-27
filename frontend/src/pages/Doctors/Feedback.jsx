@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import avatar from "../../assets/images/avatar-icon.png";
-import { formatDate } from '../../utils/formatDate';
+import { formateDate } from '../../utils/formateDate';
 import {AiFillStar} from 'react-icons/ai';
 import FeedbackForm from './FeedbackForm';
 
@@ -23,7 +23,7 @@ const Feedback = () => {
                             Anusha Nayak
                         </h5>
                         <p className="text-[14px] leading-6 text-textColor">
-                        {formatDate('02-14-2023')}
+                        {formateDate('02-14-2023')}
                         </p>
                         <p className="text__para mt-3 font-medium text-[15px]">
                             Good Services, highly recommended!
