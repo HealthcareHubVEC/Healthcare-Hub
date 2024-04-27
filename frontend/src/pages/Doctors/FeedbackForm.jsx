@@ -1,15 +1,48 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
+import { useParams } from "react-router-dom";
+import { BASE_URL, token } from '../../config';
+import HashLoader from "react-spinners/HashLoader";
+import {toast} from 'react-toastify';
+
 
 const FeedbackForm = () => {
     const [rating,setRating] = useState(0);
     const [hover,setHover] = useState(0);
     const [reviewText,setReviewText] = useState("");
+    const [loading, setLoading] = useState(false)
+
+    const{id} = useParams()
 
     const handleSubmitReview = async e=> {
         e.preventDefault();
+        setLoading(true)
+        try {
+            if(!rating || !reviewText) {
+                setLoading(false)
+                return toast.error('Rating &  Review Fields are required')
+            }
+            const res = await fetch(`${BASE_URL}/doctors/${id}/reviews`,{
+                method:'post',
+                headers: {
+                    'Content-Type':'application/json',
+                    Authorization: `Bearer ${token}`
+                },
+                body: JSON.stringify({rating,reviewText})
+            })
+            const result = await res.json()
+            if(!res.ok){
+                throw new Error(result.message)
+            }
 
-        //later we will use our api
+            setLoading(false)
+            toast.success(result.message)
+            
+        } catch (err) {
+            setLoading(false)
+            toast.error(err.message)    
+        }
+
     };
   return(
     <form action="">
@@ -19,7 +52,7 @@ const FeedbackForm = () => {
             </h3>
 
             <div>
-                {[...Array(5).keys()].map((_,index)=> {
+                {[... Array(5).keys()].map((_,index)=> {
                     index+=1
 
                     return (
@@ -61,7 +94,7 @@ const FeedbackForm = () => {
             ></textarea>
         </div>
         <button type="submit" onClick={handleSubmitReview}className="btn">
-        Submit Feedback
+        {loading ? <HashLoader size={25} color="#fff" />:'Submit Feedback'}
         </button>
     </form>
   );
