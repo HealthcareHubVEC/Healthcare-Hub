@@ -20,7 +20,7 @@ export const getCheckoutSession = async (req, res) => {
             line_items: [
                 {
                     price_data:{
-                        currency:'USD',
+                        currency:'INR',
                         unit_amount: doctor.ticketPrice * 100,
                         product_data:{
                             name: doctor.name,
