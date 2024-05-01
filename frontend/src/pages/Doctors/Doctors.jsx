@@ -1,5 +1,4 @@
 import DoctorCard from './../../components/Doctors/DoctorCard';
-import { doctors } from './../../assets/data/doctors';
 import { BASE_URL } from './../../config';
 import useFetchData from './../../hooks/useFetchData';
 import Loader from '../../components/Loader/Loading';
@@ -35,7 +34,6 @@ const Doctors = () => {
           placeholder="Search Doctor by name or specification"
           value={query}
           onChange={e=>setQuery(e.target.value)}
-
           />
           <button className="btn mt-0 rounded-[0px] rounded-r-md" onClick={handleSearch}>
             Search

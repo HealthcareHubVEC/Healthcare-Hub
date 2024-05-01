@@ -5,8 +5,11 @@ import Signup from '../pages/Signup'
 import Contact from '../pages/Contact'
 import Doctors from '../pages/Doctors/Doctors'
 import DoctorDetails from '../pages/Doctors/DoctorDetails'
+import LearnMore1 from '../pages/LearnMore1.jsx'
+import Procedure from '../pages/Procedure.jsx'
 import MyAccount from '../Dashboard/user-account/MyAccount.jsx'
 import Dashboard from '../Dashboard/doctor-account/Dashboard.jsx'
+import CheckoutSuccess from '../pages/Doctors/CheckoutSuccess.jsx'
 import { Routes, Route } from 'react-router-dom'
 import ProtectedRoute from './ProtectedRoute'
 
@@ -22,6 +25,9 @@ const Routers = () => {
       <Route path="/register" element={<Signup />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/learn-more1" element={<LearnMore1 />} />
+      <Route path="/procedure" element={<Procedure />} />
+      <Route path="/checkout-success" element={<CheckoutSuccess />} />
       <Route 
         path="/users/profile/me" 
         element={

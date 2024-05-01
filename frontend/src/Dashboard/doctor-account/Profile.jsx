@@ -16,7 +16,7 @@ const Profile = ({ doctorData }) => {
         gender: "",
         specialization: "",
         ticketPrice: 0,
-        qualifications: [],
+        availabilities: [],
         experiences: [],
         timeSlots: [],
         about: "",
@@ -32,7 +32,7 @@ const Profile = ({ doctorData }) => {
             gender: doctorData?.gender,
             specialization: doctorData?.specialization,
             ticketPrice: doctorData?.ticketPrice,
-            qualifications: doctorData?.qualifications,
+            availabilities: doctorData?.availabilities,
             experiences: doctorData?.experiences,
             about: doctorData?.about,
             timeSlots: doctorData?.timeSlots,
@@ -111,24 +111,22 @@ const Profile = ({ doctorData }) => {
         }));
     };
 
-    const addQualification = e => {
+    const addAvailability = e => {
         e.preventDefault();
 
-        addItem('qualifications', {
-            startingDate: "",
-            endingDate: "",
-            degree: "PHD",
-            university: "Kasturba Medical College",
+        addItem('availabilities', {
+            place: "",
+            Hospital: "",
         });
     };
 
-    const handleQualificationChange = (event, index) => {
-        handleReusableInputChangeFunc('qualifications', index, event)
+    const handleAvailabilityChange = (event, index) => {
+        handleReusableInputChangeFunc('availabilities', index, event)
     };
 
-    const deleteQualification = (e, index) => {
+    const deleteAvailability = (e, index) => {
         e.preventDefault();
-        deleteItem('qualifications', index);
+        deleteItem('availabilities', index);
     };
 
 
@@ -139,8 +137,8 @@ const Profile = ({ doctorData }) => {
         addItem('experiences', {
             startingDate: "",
             endingDate: "",
-            position: "Senior Surgeon",
-            hospital: "Kasturba Medical College",
+            position: "",
+            hospital_available: "",
         });
     };
 
@@ -252,9 +250,19 @@ const Profile = ({ doctorData }) => {
                                 onChange={handleInputChange}
                                 className="form__input py-3.5">
                                 <option value="">Select</option>
-                                <option value="surgeon">Surgeon</option>
-                                <option value="neurologist">Neurologist</option>
-                                <option value="dermatologist">Dermatologist</option>
+                                <option value="General Physician">General Physician</option>
+                                <option value="Dentist">Dentist</option>
+                                <option value="Surgeon">Surgeon</option>
+                                <option value="Neurologist">Neurologist</option>
+                                <option value="Dermatologist">Dermatologist</option>
+                                <option value="Cardiologist">Cardiologist</option>
+                                <option value="Oncologist">Oncologist</option>
+                                <option value="Pediatrician">Pediatrician</option>
+                                <option value="Orthopedician ">Orthopedician</option>
+                                <option value="Gynecologist">Gynecologist</option>
+                                <option value="Endocrinologist ">Endocrinologist </option>
+                                <option value="Nephrologist ">Nephrologist</option>
+                                <option value="Pulmonologist">Pulmonologist</option>  
                             </select>
                         </div>
 
@@ -273,59 +281,36 @@ const Profile = ({ doctorData }) => {
                 </div>
 
                 <div className="mb-5">
-                    <p className="form__label">Qualifications*</p>
-                    {formData.qualifications?.map((item, index) => (
+                    <p className="form__label">Availability*</p>
+                    {formData.availabilities?.map((item, index) => (
                         <div key={index}>
                             <div>
-                                <div className="grid grid-cols-2 gap-5">
-                                    <div>
-                                        <p className="form__label">Starting Date*</p>
-                                        <input
-                                            type="date"
-                                            name="startingDate"
-                                            value={item.startingDate}
-                                            className="form__input"
-                                            onChange={e => handleQualificationChange(e, index)}
-                                        />
-                                    </div>
-                                    <div>
-                                        <p className="form__label">Ending Date*</p>
-                                        <input
-                                            type="date"
-                                            name="endingDate"
-                                            value={item.endingDate}
-                                            className="form__input"
-                                            onChange={e => handleQualificationChange(e, index)}
-                                        />
-                                    </div>
-                                </div>
                                 <div className="grid grid-cols-2 gap-5 mt-5 ">
                                     <div>
-                                        <p className="form__label">Degree*</p>
+                                        <p className="form__label">Place*</p>
                                         <input
                                             type="text"
-                                            name="degree"
-                                            value={item.degree}
+                                            name="place"
+                                            value={item.place}
                                             className="form__input"
-                                            onChange={e => handleQualificationChange(e, index)}
-
+                                            onChange={e => handleAvailabilityChange(e, index)}
                                         />
                                     </div>
                                     <div>
-                                        <p className="form__label">University*</p>
+                                        <p className="form__label">Hospital*</p>
                                         <input
                                             type="text"
-                                            name="university"
-                                            value={item.university}
+                                            name="hospital_available"
+                                            value={item.hospital_available}
                                             className="form__input"
-                                            onChange={e => handleQualificationChange(e, index)}
+                                            onChange={e => handleAvailabilityChange(e, index)}
                                         />
                                     </div>
                                 </div>
 
 
-                                <button onClick={e => deleteQualification(e, index)}
-                                    className="bg-red-600 p-2 rounded-full text-white text-[18px] mt-2 mb-[30px]
+                                <button onClick={e => deleteAvailability(e, index)}
+                                    className="bg-red-600 p-2 hover:bg-red-800 rounded-full text-white text-[18px] mt-2 mb-[30px]
                                  cursor-pointer">
                                     <AiOutlineDelete />
                                 </button>
@@ -333,8 +318,8 @@ const Profile = ({ doctorData }) => {
                         </div>
                     ))}
 
-                    <button onClick={addQualification} className="bg-[#000] py-2 px-5 rounded text-white h-fit cursor-pointer">
-                        Add Qualifications
+                    <button onClick={addAvailability} className="bg-[#000] hover:bg-gray-600 py-2 px-5 rounded text-white h-fit cursor-pointer">
+                        Add Availabilities
                     </button>
                 </div>
 
@@ -387,10 +372,8 @@ const Profile = ({ doctorData }) => {
                                         />
                                     </div>
                                 </div>
-
-
                                 <button onClick={e => deleteExperience(e, index)}
-                                    className="bg-red-600 p-2 rounded-full text-white text-[18px] mt-2 mb-[30px]
+                                    className="bg-red-600 hover:bg-red-800 p-2 rounded-full text-white text-[18px] mt-2 mb-[30px]
                                 cursor-pointer">
                                     <AiOutlineDelete />
                                 </button>
@@ -398,7 +381,7 @@ const Profile = ({ doctorData }) => {
                         </div>
                     ))}
 
-                    <button onClick={addExperience} className="bg-[#000] py-2 px-5 rounded text-white h-fit cursor-pointer">
+                    <button onClick={addExperience} className="bg-[#000] hover:bg-gray-600 py-2 px-5 rounded text-white h-fit cursor-pointer">
                         Add Experience
                     </button>
                 </div>
@@ -447,7 +430,7 @@ const Profile = ({ doctorData }) => {
                                         />
                                     </div>
                                     <div onClick={e => deleteTimeSlot(e, index)} className="flex items-center">
-                                        <button className="bg-red-600 p-2 rounded-full text-white text-[18px] cursor-pointer
+                                        <button className="bg-red-600 hover:bg-red-800 p-2 rounded-full text-white text-[18px] cursor-pointer
                                         mt-6">
                                             <AiOutlineDelete />
                                         </button>
@@ -457,7 +440,7 @@ const Profile = ({ doctorData }) => {
                         </div>
                     ))}
 
-                    <button onClick={addTimeSlot} className="bg-[#000] py-2 px-5 rounded text-white h-fit cursor-pointer">
+                    <button onClick={addTimeSlot} className="bg-[#000] hover:bg-gray-600 py-2 px-5 rounded text-white h-fit cursor-pointer">
                         Add TimeSlot
                     </button>
                 </div>
@@ -499,13 +482,13 @@ const Profile = ({ doctorData }) => {
                         <label
                             htmlFor="customFile"
                             className="absolute top-0 left-0 w-full h-full flex items-center px-[0.75rem] py-[0.375rem]
-                                        text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer">
+                                        text-[15px] leading-6 overflow-hidden hover:bg-blue-400 bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer">
                             Upload Photo</label>
                     </div>
                 </div>
 
                 <div className="mt-7">
-                    <button type="submit" onClick={updateProfileHandler} className="bg-primaryColor text-white text-[18px] leading-[30px] w-full py-3 px-4
+                    <button type="submit" onClick={updateProfileHandler} className="bg-primaryColor hover:bg-blue-900 text-white text-[18px] leading-[30px] w-full py-3 px-4
                     rounded-lg">Update Profile</button>
                 </div>
 

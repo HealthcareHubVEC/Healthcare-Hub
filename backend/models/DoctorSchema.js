@@ -13,15 +13,14 @@ const DoctorSchema = new mongoose.Schema({
 
   // Fields for doctors only
   specialization: { type: String },
-  qualifications: {
+  availabilities: {
     type: Array,
   },
 
   experiences: {
     type: Array,
   },
-
-  bio: { type: String, maxLength: 50 },
+  bio: { type: String, maxLength: 100 },
   about: { type: String },
   timeSlots: { type: Array },
   reviews: [{ type: mongoose.Types.ObjectId, ref: "Review" }],

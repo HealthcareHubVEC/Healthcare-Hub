@@ -1,5 +1,5 @@
 import { useEffect, useRef, useContext } from "react";
-import logo from "../../assets/images/logo.png";
+import logo1 from "../../assets/images/logo1.png";
 import { NavLink, Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { authContext } from "../../context/AuthContext";
@@ -53,7 +53,7 @@ const Header = () => {
       <div className="flex items-center justify-between">
         {/*===== logo =====*/}
         <div>
-          <img src={logo} alt=""  />
+          <img src={logo1} alt=""  />
         </div>
 
 
@@ -86,7 +86,7 @@ const Header = () => {
             </div>
           ) : (
             <Link to="/login">
-              <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex  
+              <button className="bg-primaryColor hover:bg-blue-900 py-2 px-6 text-white font-[600] h-[44px] flex  
           items-center justify-center rounded-[50px]">Login</button>
             </Link>
           )}

@@ -1,11 +1,11 @@
 import React from "react";
-import heroImg01 from "../assets/images/hero-img01.png";
-import heroImg02 from "../assets/images/hero-img02.png";
-import heroImg03 from "../assets/images/hero-img03.png";
+import heroImg01 from "../assets/images/hero-img011.jpg";
+import heroImg02 from "../assets/images/hero-img022.jpg";
+import heroImg03 from "../assets/images/hero-img033.jpg";
 import icon01 from "../assets/images/icon01.png";
-import icon02 from "../assets/images/icon02.png";
+import icon021 from "../assets/images/icon021.png";
 import icon03 from "../assets/images/icon03.png";
-import featureImg from "../assets/images/feature-img.png";
+import featureImg from "../assets/images/doctor-img03.png";
 import faqImg from "../assets/images/faq-img.png";
 import videoIcon from "../assets/images/video-icon.png";
 import avatarIcon from "../assets/images/avatar-icon.png";
@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import { BsArrowRight, } from "react-icons/bs";
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
-import DoctorList from "../components/Doctors/DoctorList";
 import FaqList from "../components/Faq/FaqList";
 
 
@@ -27,14 +26,17 @@ const Home = () => {
 
             {/*===== hero content =====*/}
             <div>
-              <div className="lg:w-[570px]">
+              <div className="lg:w-[570px] ">
                 <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px]
-                md:leading-[70px]">We help patients live a healthy, longer life</h1>
+                md:leading-[70px]">Guiding <span className="text-primaryColor">patients</span> towards healthier, <span className="text-primaryColor">happier </span>lives</h1>
                 <p className="text__para">
-                  Healthcare hub helps you to find the best doctors based on data, not opinions. We provide the best choices for you, adjust it to your health needs and make sure you undergo treatment with the highly qualified doctors available in your location.
+                At Healthcare Hub, patients can effortlessly discover doctors and schedule appointments tailored to their specific needs. Our platform streamlines the process, 
+                allowing individuals to browse through a diverse range of healthcare professionals, view their specialities, and book appointments with ease, 
+                ensuring a seamless healthcare experience.
                 </p>
-
-                <button className="btn">Request an Appointment</button>
+                <Link to={"/procedure"}>
+                  <button className="btn hover:bg-blue-900">View Procedure</button>
+                </Link>
               </div>
 
               {/*==== hero counter====*/}
@@ -43,14 +45,13 @@ const Home = () => {
 
                 <div>
                   <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700]
-                text-headingColor">30+</h2>
+                text-headingColor">15+</h2>
                   <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px]"></span>
-                  <p className="text__para">Years of Experience</p>
+                  <p className="text__para">Specialists</p>
                 </div>
-
                 <div>
                   <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700]
-                text-headingColor">15+</h2>
+                text-headingColor">10+</h2>
                   <span className="w-[100px] h-2 bg-purpleColor rounded-full block mt-[-14px]"></span>
                   <p className="text__para">Clinic Locations</p>
                 </div>
@@ -67,11 +68,11 @@ const Home = () => {
 
             <div className="flex gap-[30px] justify-end">
               <div>
-                <img className="w-full" src={heroImg01} alt="" />
+                <img className="w-full rounded-2xl" src={heroImg01} alt="" />
               </div>
               <div className="mt-[30px]">
-                <img src={heroImg02} alt="" className="w-full mb-[30px]" />
-                <img src={heroImg03} alt="" className="w-full" />
+                <img src={heroImg02} alt="" className="w-full mb-[30px] rounded-2xl" />
+                <img src={heroImg03} alt="" className="w-full rounded-2xl" />
               </div>
             </div>
           </div>
@@ -84,9 +85,8 @@ const Home = () => {
             <h2 className="heading text-center">
               Providing the best medical services
             </h2>
-            <p className="text__para text-center">
-              World class care for everyone. Our health System offers unmatched,
-              expert health care.
+            <p className="text__para text-center"> 
+            Delivering top-tier care to all, our health system provides unmatched expertise and support.
             </p>
           </div>
 
@@ -100,10 +100,9 @@ const Home = () => {
 
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Find a Doctor</h2>
+                  Doctor by Name</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                  World-class care everyone. Our health system offers
-                  unmatched, expert health care. From the lab to the clinic.
+                Discovering the right doctor is just a click away with our streamlined platform.
                 </p>
 
                 <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
@@ -113,18 +112,17 @@ const Home = () => {
               </div>
 
             </div>
-            <div className="py-[30px] px-5">
+            <div className="py-[30px] px-10 ">
               <div className="flex items-center justify-center">
-                <img src={icon02} alt="" />
+                <img src={icon021} alt="" />
               </div>
 
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Find a Location</h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                  World-class care everyone. Our health system offers
-                  unmatched, expert health care. From the lab to the clinic.
-                </p>
+                  Find a Specialist</h2>
+                  <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                    Quickly locate the specialist you require using our tailored search tool.
+                  </p>
 
                 <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
                    mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
@@ -142,8 +140,7 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Book Appointment</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                  World-class care everyone. Our health system offers
-                  unmatched, expert health care. From the lab to the clinic.
+                Book appointments effortlessly with our user-friendly system, designed to suit your schedule.
                 </p>
 
                 <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
@@ -164,11 +161,9 @@ const Home = () => {
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center">Our medical services</h2>
             <p className="text__para text-center">
-              World-class care for everyone. Our health System offers unmatched,
-              expert health care.
+            Our medical services encompass a wide range of specialized care, tailored to meet the unique needs of each patient.
             </p>
           </div>
-
           <ServiceList />
         </div>
       </section>
@@ -196,10 +191,11 @@ const Home = () => {
                   3. Veiw our physician who are accepting new patients, use the
                   online scheduling tool to select appointment time
                 </li>
+                <li className="text__para">
+                  4. Utilize our online scheduling tool and 
+                  provide feedback for continuous improvement.
+                </li>
               </ul>
-              <Link to="/">
-                <button className="btn">Learn More</button>
-              </Link>
             </div>
 
             {/*====feature img======*/}
@@ -234,7 +230,7 @@ const Home = () => {
                   <img src={avatarIcon} alt="" />
                   <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700]
                   text-headingColor">
-                    Wayne Collins
+                    Mahesh Choudary
                   </h4>
                 </div>
               </div>
@@ -243,22 +239,6 @@ const Home = () => {
         </div>
       </section>
       {/*======== feature section end=======*/}
-
-      {/*======== Our great doctors =======*/}
-      <section>
-        <div className="container">
-          <div className="xl:w-[470px] mx-auto">
-            <h2 className="heading text-center">Our great doctors</h2>
-            <p className="text__para text-center">
-              World-class care for everyone. Our health System offers unmatched,
-              expert health care.
-            </p>
-          </div>
-
-          <DoctorList />
-        </div>
-      </section>
-      {/*======== Our great doctors end =======*/}
 
       {/*======== faq section ========*/}
       <section>
@@ -280,22 +260,6 @@ const Home = () => {
         </div>
       </section>
       {/*======== faq section end ========*/}
-
-      {/*======testimonial========*/}
-      {/*<section>
-        <div className="container">
-          <div className="xl:w-[470px] mx-auto">
-            <h2 className="heading text-center">What our patient say</h2>
-            <p className="text__para text-center">
-              World-class care for everyone. Our health System offers unmatched,
-              expert health care.
-            </p>
-          </div>
-
-        </div>
-      </section>*/}
-      {/*======testimonial end======*/}
-    
     </>
   </>
 };

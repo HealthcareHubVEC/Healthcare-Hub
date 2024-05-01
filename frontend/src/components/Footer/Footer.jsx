@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logo1 from '../../assets/images/logo1.png';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { AiFillYoutube, AiFillGithub, AiOutlineInstagram } from 'react-icons/ai';
 
@@ -10,7 +10,7 @@ const socialLinks = [
     icon: <AiFillYoutube className="group-hover:text-white w-4 h-5" />,
   },
   {
-    path: "#",
+    path: "https://github.com/HealthcareHubVEC/Healthcare-Hub",
     icon: <AiFillGithub className="group-hover:text-white w-4 h-5" />,
   },
   {
@@ -29,12 +29,8 @@ const quickLink01 = [
     display: "Home",
   },
   {
-    path: "/",
-    display: "About Us",
-  },
-  {
-    path: "/home",
-    display: "Home",
+    path: "/login",
+    display: "Login",
   },
   {
     path: "/services",
@@ -44,27 +40,19 @@ const quickLink01 = [
 
 const quickLink02 = [
   {
-    path: "/find-a-doctor",
+    path: "/doctors",
     display: "Find a Doctor",
   },
   {
-    path: "/",
-    display: "Request an Appointment",
+    path: "/procedure",
+    display: "View Procedure",
   },
   {
-    path: "/",
-    display: "Find a Location",
-  },
-  {
-    path: "/",
-    display: "Get a Opinion",
+    path: "/learn-more1",
+    display: "Learn More",
   },
 ];
 const quickLink03 = [
-  {
-    path: "/",
-    display: "Donate",
-  },
   {
     path: "/contact",
     display: "Contact Us",
@@ -80,9 +68,9 @@ const Footer = () => {
       <div className="container">
         <div className="flex justify-between flex-col md:flex-row flex-wrap gap-[30px]">
           <div>
-            <img src={logo} alt="" />
+            <img src={logo1} alt="" />
             <p className="text-[16px] leading-7 font-[400] text-textColor">
-              Copyright © {year} developed by Anagha and team all rights reserved
+              Copyright © {year} developed by VEC team 2 all rights reserved
             </p>
             <div className="flex items-center gap-3 mt-4">
               {socialLinks.map((link, index) => (
@@ -135,8 +123,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-
         </div>
       </div>
     </footer>

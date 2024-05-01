@@ -93,7 +93,7 @@ const Login = () => {
             />
           </div>
           <div className="mt-7">
-            <button type="submit" className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3">
+            <button type="submit" className="w-full bg-primaryColor hover:bg-blue-900 text-white text-[18px] leading-[30px] rounded-lg px-4 py-3 ">
               {loading ? <HashLoader size={25} color='#fff'/> : " Login"}
             </button>
           </div>

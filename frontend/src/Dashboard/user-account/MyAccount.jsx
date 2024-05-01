@@ -56,12 +56,12 @@ const MyAccount = () => {
           <div className="mt-[50px] md:mt-[100px]">
             <button
               onClick={handleLogout}
-              className="w-full bg-[#181A1E] p-3 text-[16px] leading-7 rounded-md text-white">
+              className="w-full bg-red-500 hover:bg-red-800 p-3 text-[16px] leading-7 rounded-md text-white">
               Logout
             </button>
-            <button className="w-full bg-red-600 mt-4 p-3 text-[16px] leading-7 rounded-md text-white">
+           {/* <button className="w-full bg-red-500 hover:bg-red-900 mt-4 p-3 text-[16px] leading-7 rounded-md text-white">
               Delete Account
-            </button>
+            </button>*/}
           </div>
         </div>
 

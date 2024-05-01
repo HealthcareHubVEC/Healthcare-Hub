@@ -2,7 +2,7 @@
   "name": "healthcare-hub",
   "version": "1.0.0",
   "description": "",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +19,8 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.3.2"
+    "mongoose": "^8.3.2",
+    "stripe": "^15.4.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

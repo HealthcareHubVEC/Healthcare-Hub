@@ -12,7 +12,7 @@ const FeedbackForm = () => {
     const [reviewText,setReviewText] = useState("");
     const [loading, setLoading] = useState(false)
 
-    const{id} = useParams()
+    const{id} = useParams() 
 
     const handleSubmitReview = async e=> {
         e.preventDefault();

@@ -22,7 +22,7 @@ const DoctorDetails = () => {
 
   const {
     name,
-    qualifications,
+    availabilities,
     experiences,
     timeSlots,
     reviews,
@@ -91,7 +91,7 @@ const DoctorDetails = () => {
           <DoctorAbout 
             name={name} 
             about={about} 
-            qualifications={qualifications} 
+            availabilities={availabilities} 
             experiences={experiences} 
            />
         )}
