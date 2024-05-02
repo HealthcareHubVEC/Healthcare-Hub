@@ -30,9 +30,9 @@ const Home = () => {
                 <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px]
                 md:leading-[70px]">Guiding <span className="text-primaryColor">patients</span> towards healthier, <span className="text-primaryColor">happier </span>lives</h1>
                 <p className="text__para">
-                At Healthcare Hub, patients can effortlessly discover doctors and schedule appointments tailored to their specific needs. Our platform streamlines the process, 
-                allowing individuals to browse through a diverse range of healthcare professionals, view their specialities, and book appointments with ease, 
-                ensuring a seamless healthcare experience.
+                  At Healthcare Hub, patients can effortlessly discover doctors and schedule appointments tailored to their specific needs. Our platform streamlines the process,
+                  allowing individuals to browse through a diverse range of healthcare professionals, view their specialities, and book appointments with ease,
+                  ensuring a seamless healthcare experience.
                 </p>
                 <Link to={"/procedure"}>
                   <button className="btn hover:bg-blue-900">View Procedure</button>
@@ -85,8 +85,8 @@ const Home = () => {
             <h2 className="heading text-center">
               Providing the best medical services
             </h2>
-            <p className="text__para text-center"> 
-            Delivering top-tier care to all, our health system provides unmatched expertise and support.
+            <p className="text__para text-center">
+              Delivering top-tier care to all, our health system provides unmatched expertise and support.
             </p>
           </div>
 
@@ -102,13 +102,8 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Doctor by Name</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                Discovering the right doctor is just a click away with our streamlined platform.
+                  Discovering the right doctor is just a click away with our streamlined platform.
                 </p>
-
-                <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
-                   mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
               </div>
 
             </div>
@@ -120,14 +115,9 @@ const Home = () => {
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Find a Specialist</h2>
-                  <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                    Quickly locate the specialist you require using our tailored search tool.
-                  </p>
-
-                <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
-                   mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  Quickly locate the specialist you require using our tailored search tool.
+                </p>
               </div>
 
             </div>
@@ -140,17 +130,18 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Book Appointment</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
-                Book appointments effortlessly with our user-friendly system, designed to suit your schedule.
+                  Book appointments effortlessly with our user-friendly system, designed to suit your schedule.
                 </p>
-
-                <Link to="/doctors" className="w-[44px] h-[44px] rounded-full border border-solid boder-[#181A1E]
-                   mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
               </div>
 
             </div>
           </div>
+        </div>
+        <div className="px-8 py-8">
+          <Link to="/doctors" className="w-[80px] h-[40px] rounded-lg border border-solid boder-[#181A1E]
+                  mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+            <BsArrowRight className="group-hover:text-white w-6 h-5" />
+          </Link>
         </div>
       </section>
       <About />
@@ -161,7 +152,7 @@ const Home = () => {
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center">Our medical services</h2>
             <p className="text__para text-center">
-            Our medical services encompass a wide range of specialized care, tailored to meet the unique needs of each patient.
+              Our medical services encompass a wide range of specialized care, tailored to meet the unique needs of each patient.
             </p>
           </div>
           <ServiceList />
@@ -192,7 +183,7 @@ const Home = () => {
                   online scheduling tool to select appointment time
                 </li>
                 <li className="text__para">
-                  4. Utilize our online scheduling tool and 
+                  4. Utilize our online scheduling tool and
                   provide feedback for continuous improvement.
                 </li>
               </ul>

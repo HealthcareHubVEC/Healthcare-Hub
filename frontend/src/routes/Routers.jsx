@@ -1,5 +1,6 @@
 import Home from '../pages/Home'
 import Services from '../pages/Services'
+import About from '../components/About/About.jsx'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import Contact from '../pages/Contact'
@@ -19,6 +20,7 @@ const Routers = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/doctors/:id" element={<DoctorDetails />} />
       <Route path="/login" element={<Login />} />

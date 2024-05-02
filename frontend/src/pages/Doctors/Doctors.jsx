@@ -26,7 +26,7 @@ const Doctors = () => {
   } = useFetchData(`${BASE_URL}/doctors?query=${debounceQuery}`)
   return (
     <>
-    <section className="bg-[#fff9ea]">
+    <section className="bg-[#eceeef]">
       <div className="container text-center">
         <h2 className = "heading">Find a Doctor</h2>
         <div className="max-w-[570px] mt-[30px] mx-auto bg-[#0066ff2c] rounded-md flex items-center justify-between">
